@@ -8,6 +8,7 @@ events.on("push   ", function(e, project) {
 
   // We want our job to run the stock Docker Python 3 image
   node.image = "python:3"
+  node.useSource = true
 
   // Now we want it to run these commands in order:
   node.tasks = [
