@@ -20,5 +20,9 @@ events.on("push   ", function(e, project) {
   ]
 
   // We're done configuring, so we run the job
-  node.run()
+  node.run().then(
+    (result) => {
+      console.log("\n job says", result.toString())
+    }
+  )
 })
